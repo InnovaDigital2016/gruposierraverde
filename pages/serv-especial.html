@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/images/SV-Logo.png">
+    <title> Grupo Sierra Verde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style_general.css">
+    <link rel="stylesheet" href="/css/style_index1.css">
+    <link rel="stylesheet" href="/css/style_serv_esp.css">
+    <link rel="stylesheet" href="/css/style_nosotros.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap">
+    <style>
+    /* Modal de cotización */
+    .modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.5);align-items:center;justify-content:center;padding:20px}
+    .modal.open{display:flex}
+    .modal-content{background:#fff;border-radius:8px;max-width:640px;width:100%;padding:20px;position:relative;box-shadow:0 6px 30px rgba(0,0,0,.2)}
+    .modal-close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:28px;cursor:pointer}
+    .modal-content h3{margin-top:0; color:var(--color-principal)}
+    .modal-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .modal-row .full{grid-column:1/-1}
+    .modal-content input,.modal-content textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;background:#fff;color:#222}
+    .modal-content input::placeholder,.modal-content textarea::placeholder{color:#8b8b8b}
+    .modal-content label{font-size:14px;display:block;margin-bottom:6px;color:#222;font-weight:600}
+    .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+    .btn-ghost{background:transparent;border:1px solid #ccc;padding:8px 12px;border-radius:6px;cursor:pointer}
+    .btn-primary{background:var(--color-principal);color:var(--color-apoyo);border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+    @media(max-width:600px){.modal-row{grid-template-columns:1fr}}
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar" id="progress"></div>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">
+                <span class="logo-icon"><img src="/assets/images/SV-Logo.png" alt=""></span>Grupo Sierra Verde
+            </a>
+            
+            <!-- MENU AMBURGUESA -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">INICIO</a></li>
+
+                <li class="dropdown">
+                    <a href="/pages/nosotros.html" class="dropbtn">
+                        NOSOTROS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/nosotros.html">Quienes Somos</a></li>
+                        <li><a href="/pages/valores.html">Valores</a></li>
+                        <li><a href="/pages/nosotros.html#testimonios">Testimonios</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/pages/trans-regular.html" class="dropbtn active1">
+                        SERVICIOS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                        <li><a href="/pages/serv-especial.html" class="active1">Servicio Especial</a></li>
+                     </ul>
+                </li>
+
+                <li><a href="/pages/galeria.html">GALERÍA</a></li>
+                <li><a href="/pages/politica.html">POLÍTICA</a></li>
+                <li><a href="/pages/contactos.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://facebook.com/G.SierraVerde/" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/51944383514?text=Buenos días, tengo una consulta sobre..." target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-whatsapp"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/g.sierraverde?igsh=MTdrZHJpcGQyYzVoaA%3D%3D" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@gruposierraverde1" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-tiktok"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+                <!-- SERV ESPECIAL SECTION -->
+        <section class="serv-especial-section">
+            <div class="container">
+                <div class="serv-especial-hero">
+                    <div class="serv-especial-header">
+                        <p class="serv-especial-eyebrow">Servicio Especial</p>
+                        <h2>Servicios adicionales personalizados</h2>
+                        <p class="serv-especial-text">Ofrecemos servicios diseñados para cubrir necesidades corporativas, turísticas, logísticas y traslados especiales, con un enfoque en la calidad y la seguridad.</p><br>
+                        
+                        <button id="open-quote-btn" class="serv-especial-eyebrow" 
+                            style="background-color: var(--color-principal); color: var(--color-apoyo); cursor: pointer; border: none; transition: 0.25s ease;"
+                            onmouseover="this.style.backgroundColor='var(--color-redes)'; this.style.color='var(--color-apoyo)';"
+                            onmouseout="this.style.backgroundColor='var(--color-principal)'; this.style.color='var(--color-apoyo)';">
+                            ➜ Cotizar Servicio
+                        </button>
+
+                        <!-- Modal Cotización -->
+                        <div id="quote-modal" class="modal" aria-hidden="true">
+                            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+                                <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+                                <h3 id="quote-title">Cotizar Servicio</h3>
+                                <form id="quote-form">
+                                    <div class="modal-row">
+                                        <div>
+                                            <label>Nombre:<input type="text" name="nombre" required></label>
+                                        </div>
+                                        <div>
+                                            <label>DNI:<input type="text" name="dni" required></label>
+                                        </div>
+                                        <div>
+                                            <label>Destino:<input type="text" name="destino" required></label>
+                                        </div>
+                                        <div>
+                                            <label>Celular:<input type="tel" name="celular" required></label>
+                                        </div>
+                                        <div>
+                                            <label>Fecha:<input type="date" name="fecha" required></label>
+                                        </div>
+                                        <div>
+                                            <label>Hora de Salida:<input type="time" name="hora_salida" required></label>
+                                        </div>
+                                        <div>
+                                            <label>Hora de Llegada:<input type="time" name="hora_llegada"></label>
+                                        </div>
+                                        <div>
+                                            <label>Nro de personas:<input type="number" name="nro_personas" min="1"></label>
+                                        </div>
+                                        <div class="full">
+                                            <label>Descripción:<textarea name="descripcion" rows="3"></textarea></label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <button type="button" class="btn-ghost" id="modal-cancel">Cancelar</button>
+                                        <button type="submit" class="btn-primary" id="send-whatsapp">Enviar por WhatsApp</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serv-especial-hero-media">
+                        <img src="/assets/images/serv-especial1.jpeg" alt="Servicio Especial - Grupo Sierra Verde">
+                    </div>
+                </div>
+
+                <div class="serv-especial-grid">
+                    <article class="serv-especial-card">
+                        <div class="serv-especial-icon"><i class="fa-solid fa-taxi"></i></div>
+                        <div class="serv-especial-content">
+                            <h3>Servicio de Taxi Especial</h3>
+                            <p>Traslados urbanos e interurbanos personalizados, disponibles de forma exclusiva y programada para asegurar viajes rápidos, cómodos y seguros.</p>
+                        </div>
+                    </article>
+
+                    <article class="serv-especial-card">
+                        <div class="serv-especial-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="serv-especial-content">
+                            <h3>Transporte Corporativo y Ejecutivo</h3>
+                            <p>Servicio de movilidad diseñado para empresas, garantizando puntualidad, confort y la máxima seguridad para ejecutivos y personal.</p>
+                        </div>
+                    </article>
+
+                    <article class="serv-especial-card">
+                        <div class="serv-especial-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="serv-especial-content">
+                            <h3>Traslados Logísticos</h3>
+                            <p>Soluciones eficientes en transporte de carga ligera y distribución, optimizando los tiempos de entrega de sus operaciones.</p>
+                        </div>
+                    </article>
+
+                    <article class="serv-especial-card">
+                        <div class="serv-especial-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div class="serv-especial-content">
+                            <h3>Transporte Turístico y Guiado</h3>
+                            <p>Recorridos guiados hacia los principales atractivos de Cajamarca, garantizando una experiencia cómoda en rutas como Cumbe Mayo, Granja Porcón, Ventanillas de Otuzco, Namora, entre otros.</p>
+                            <p class="serv-especial-highlight">Otras rutas adaptables bajo cotización directa personalizada.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/index.html" class="logo-footer"><img style="width: 120px; height: 60px; justify-self: center;" src="/assets/images/SV-Logo-Blanco.png" alt=""></a>
+                <p>Somos una empresa de transporte comprometida con brindar un servicio seguro, puntual y de calidad, conectando personas y comunidades con responsabilidad, profesionalismo y un firme compromiso con el desarrollo de la región Cajamarca.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Acceso Rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="/pages/servicios.html">Servicios</a></li>
+                    <li><a href="/pages/politica.html">Política</a></li>
+                    <li><a href="/pages/contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                    <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul class="footer-links footer-contact-links">
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Jr.+Mara%C3%B1%C3%B3n+827+Cajamarca" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Jr. Marañón 827 - Cajamarca</a></li>
+                    <li><a href="mailto:g.sierraverde@gmail.com"><i class="fa-solid fa-envelope"></i> g.sierraverde@gmail.com</a></li>
+                    <li><a href="tel:+51944383514"><i class="fa-solid fa-mobile-screen-button"></i> +51 944 383 514</a></li>
+                    <li><a href="tel:+5176611170"><i class="fa-solid fa-phone"></i> (076) 611 170</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>Grupo Sierra Verde - Cajamarca, © 2026 - Todos los derechos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">|</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+
+        <script src="/js/script.js"></script>
+
+    </footer>
+
+
+
+
+    <script src="/js/slider.js"></script>
+    <script src="/js/slogan.js"></script>
+    <script src="/js/men-amburguesa.js"></script>
+
+    <script>
+        // Menú interactivo de rutas
+        document.querySelectorAll('.route-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const routeId = this.getAttribute('data-route');
+                
+                // Remover clase active de todos los botones
+                document.querySelectorAll('.route-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Agregar clase active al botón clickeado
+                this.classList.add('active');
+                
+                // Remover clase active de todos los detalles
+                document.querySelectorAll('.route-detail').forEach(detail => {
+                    detail.classList.remove('active');
+                });
+                
+                // Agregar clase active al detalle correspondiente
+                document.getElementById(routeId).classList.add('active');
+            });
+        });
+    </script>
+
+    <script>
+        // Lógica modal cotización y envío por WhatsApp
+        (function(){
+            const openBtn = document.getElementById('open-quote-btn');
+            const modal = document.getElementById('quote-modal');
+            const closeBtn = document.getElementById('modal-close');
+            const cancelBtn = document.getElementById('modal-cancel');
+            const form = document.getElementById('quote-form');
+            const WA_NUMBER = '51927894446';
+
+            function formatDateISOtoDDMMYYYY(d){
+                if(!d) return '';
+                const parts = d.split('-');
+                if(parts.length !== 3) return d;
+                return `${parts[2]}-${parts[1]}-${parts[0]}`;
+            }
+
+            function openModal(){
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden','false');
+                const first = modal.querySelector('input[name="nombre"]');
+                if(first) first.focus();
+            }
+            function closeModal(){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden','true');
+            }
+
+            openBtn && openBtn.addEventListener('click', openModal);
+            closeBtn && closeBtn.addEventListener('click', closeModal);
+            cancelBtn && cancelBtn.addEventListener('click', closeModal);
+
+            // Close modal when clicking outside content
+            modal && modal.addEventListener('click', function(e){
+                if(e.target === modal) closeModal();
+            });
+
+            form && form.addEventListener('submit', function(e){
+                e.preventDefault();
+                const data = new FormData(form);
+                const fields = {
+                    nombre: data.get('nombre') || '',
+                    dni: data.get('dni') || '',
+                    destino: data.get('destino') || '',
+                    celular: data.get('celular') || '',
+                    fecha: data.get('fecha') || '',
+                    hora_salida: data.get('hora_salida') || '',
+                    hora_llegada: data.get('hora_llegada') || '',
+                    nro_personas: data.get('nro_personas') || '',
+                    descripcion: data.get('descripcion') || ''
+                };
+
+                const message = `Hola Sierra Verde, quisiera cotizar un servicio de transporte.\n\n* Nombre: ${fields.nombre}\n* DNI: ${fields.dni}\n* Destino: ${fields.destino}\n* Celular: ${fields.celular}\n* Fecha: ${formatDateISOtoDDMMYYYY(fields.fecha)}\n* Hora de Salida: ${fields.hora_salida}\n* Hora de Llegada: ${fields.hora_llegada}\n* Nro de personas: ${fields.nro_personas}\n* Descripción: ${fields.descripcion}\n\n¿Podrían brindarme información sobre disponibilidad y tarifas?`;
+
+                const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank');
+                closeModal();
+                form.reset();
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/images/SV-Logo.png">
+    <title> Grupo Sierra Verde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style_general.css">
+    <link rel="stylesheet" href="/css/style_index1.css">
+    <link rel="stylesheet" href="/css/style_nosotros.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap">
+</head>
+
+<body>
+    <div class="progress-bar" id="progress"></div>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">
+                <span class="logo-icon"><img src="/assets/images/SV-Logo.png" alt=""></span>Grupo Sierra Verde
+            </a>
+            
+            <!-- MENU AMBURGUESA -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">INICIO</a></li>
+
+                <li class="dropdown">
+                    <a href="/pages/nosotros.html" class="dropbtn active1">
+                        NOSOTROS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/nosotros.html" class="active1">Quienes Somos</a></li>
+                        <li><a href="/pages/valores.html">Valores</a></li>
+                        <li><a href="/pages/nosotros.html#testimonios">Testimonios</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/pages/trans-regular.html" class="dropbtn">
+                        SERVICIOS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                        <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                     </ul>
+                </li>
+
+                <li><a href="/pages/galeria.html">GALERÍA</a></li>
+                <li><a href="/pages/politica.html">POLÍTICA</a></li>
+                <li><a href="/pages/contactos.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://facebook.com/G.SierraVerde/" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/51944383514?text=Buenos días, tengo una consulta sobre..." target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-whatsapp"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/g.sierraverde?igsh=MTdrZHJpcGQyYzVoaA%3D%3D" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@gruposierraverde1" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-tiktok"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="home-img">
+            <div class="hero-img-bg1">
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide active">
+                            <img src="/assets/images/trans-relugar.png" class="hero-img" alt="Grupo Sierra Verde transporte" loading="eager" decoding="async" fetchpriority="high">
+                            <div class="slide-caption">
+                                <h2>Viajes seguros y puntuales</h2>
+                                <p>Nuestro equipo garantiza viajes confiables y atención humana en cada ruta.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/preg-frec-21.jpeg" class="hero-img" alt="Grupo Sierra Verde transporte">
+                            <div class="slide-caption">
+                                <h2>Flota moderna</h2>
+                                <p>Vehículos mantenidos para su confort y seguridad durante todo el trayecto.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/interprovinciales1.jpeg" class="hero-img" alt="Grupo Sierra Verde transporte">
+                            <div class="slide-caption">
+                                <h2>Compromiso regional</h2>
+                                <p>Conectamos comunidades con un servicio responsable y cercano.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/profesionalismo1.jpeg" class="hero-img" alt="Grupo Sierra Verde transporte">
+                            <div class="slide-caption">
+                                <h2>Profesionalismo</h2>
+                                <p>Personal capacitado y procesos que priorizan su bienestar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn prev" aria-label="Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next" aria-label="Siguiente">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero1 about-section" id="home">
+            <div class="about-intro">
+                <div class="about-intro-content">
+                    <p class="about-eyebrow">Quiénes somos</p>
+                    <h2>Una empresa comprometida con la seguridad, puntualidad y calidad.</h2>
+                    <p>
+                        Fundada en Cajamarca con el propósito de conectar personas y comunidades mediante un servicio de transporte seguro, puntual y confiable. Hoy seguimos creciendo con una flota moderna, un equipo comprometido y la convicción de brindar una experiencia de viaje que inspire confianza en cada recorrido.                    </p>
+                    </p>
+                </div>
+                <div class="about-intro-media">
+                    <img src="/assets/images/trans-relugar.png" alt="Equipo de Grupo Sierra Verde">
+                </div>
+            </div>
+
+            <div class="about-identity">
+                <p class="about-eyebrow">Nuestra identidad</p>
+                <!--<h3>Misión y visión</h3>-->
+                <h2 style="color: black; font-size: 1.4rem;">Conectamos destinos, construimos confianza</h2>
+                <p style="color: var(--color-complementario); padding-top: 0.5rem; font-size: 1.1em;">Trabajamos para brindar un servicio confiable y de calidad, con el compromiso de seguir creciendo y ser la empresa de transporte en la que nuestros clientes siempre puedan confiar.</p>
+            </div>
+
+            <div class="empresa-cards">
+                <article class="empresa-card">
+                    <div class="empresa-card-body">
+                        <div class="empresa-card-content">
+                            <div class="empresa-text">
+                                <h3>Misión</h3>
+                                <p>
+                                    Brindar soluciones integrales de transporte regular, turístico y corporativo en la región Cajamarca, ofreciendo un servicio seguro, puntual y confortable. Conectamos personas y comunidades con una flota moderna, un equipo comprometido y una atención basada en la confianza, la responsabilidad y la calidad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="empresa-card-media">
+                            <img src="/assets/images/mision.jpg" alt="Misión de Grupo Sierra Verde">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="empresa-card">
+                    <div class="empresa-card-body">
+                        <div class="empresa-card-content">
+                            <div class="empresa-text">
+                                <h3>Visión</h3>
+                                <p>
+                                    Consolidarnos al 2030 como la empresa de transporte líder y más confiable del norte del Perú, reconocida por la excelencia de nuestros servicios, la modernización de nuestra flota, el desarrollo de nuestro equipo y el compromiso permanente con la seguridad vial y el desarrollo regional.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="empresa-card-media">
+                            <img src="/assets/images/vision.jpg" alt="Visión de Grupo Sierra Verde">
+                        </div>
+                    </div>
+                </article>
+
+                <!--<article class="empresa-card">
+                    <div class="empresa-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3>Quiénes somos</h3>
+                    <p>
+                        Grupo Sierra Verde es una organización fundada en Cajamarca con el objetivo de conectar comunidades mediante transporte seguro, puntual y humano. Nuestra trayectoria se basa en la modernización de la flota y la formación continua de nuestro equipo.
+                    </p>
+                </article>-->
+            </div>
+        </section>
+
+        <section class="testimonios-section" id="testimonios">
+            <div class="testimonios-container">
+                <!-- Lado Izquierdo: Encabezado e Imagen -->
+                <div class="testimonios-media-section">
+                    <div class="testimonios-header">
+                        <p class="testimonios-eyebrow">Lo que dicen nuestros clientes</p>
+                        <h2>Historias de confianza y satisfacción</h2>
+                        <p class="testimonios-description">Conoce las experiencias de nuestros pasajeros. Sus historias reflejan nuestro compromiso con la seguridad, la puntualidad y la calidad en cada viaje. Nos enorgullece ser parte de sus trayectos y seguir ganando su confianza día tras día.</p>
+                    </div>
+                    <div class="testimonios-media">
+                        <img src="/assets/images/preg-frec-21.jpeg" alt="Clientes de Grupo Sierra Verde" class="testimonios-img">
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Comentarios -->
+                <div class="testimonios-content">
+                    <div class="testimonios-grid">
+                        <!-- Testimonio 1 -->
+                        <article class="testimonio-card">
+                            <div class="testimonio-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="testimonio-content">
+                                <div class="testimonio-header-row">
+                                    <h4 class="testimonio-nombre">Carlos M.</h4>
+                                    <div class="testimonio-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonio-texto">"Excelente servicio, los conductores muy profesionales y las flotas siempre están limpios."</p>
+                                <p class="testimonio-lugar">Cajamarca</p>
+                                <p class="testimonio-fecha">Enero 2026</p>
+                            </div>
+                        </article>
+
+                        <!-- Testimonio 2 -->
+                        <article class="testimonio-card">
+                            <div class="testimonio-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="testimonio-content">
+                                <div class="testimonio-header-row">
+                                    <h4 class="testimonio-nombre">María G.</h4>
+                                    <div class="testimonio-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonio-texto">"Viajo constantemente y Sierra Verde es mi opción preferida. Siempre llegan a tiempo."</p>
+                                <p class="testimonio-lugar">Lima</p>
+                                <p class="testimonio-fecha">Febrero 2026</p>
+                            </div>
+                        </article>
+
+                        <!-- Testimonio 3 -->
+                        <article class="testimonio-card">
+                            <div class="testimonio-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="testimonio-content">
+                                <div class="testimonio-header-row">
+                                    <h4 class="testimonio-nombre">Juan R.</h4>
+                                    <div class="testimonio-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonio-texto">"Flota moderna y confortable. Es seguro viajar con Grupo Sierra Verde."</p>
+                                <p class="testimonio-lugar">Trujillo</p>
+                                <p class="testimonio-fecha">Marzo 2026</p>
+                            </div>
+                        </article>
+
+                        <!-- Testimonio 4 -->
+                        <article class="testimonio-card">
+                            <div class="testimonio-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="testimonio-content">
+                                <div class="testimonio-header-row">
+                                    <h4 class="testimonio-nombre">Corporativo Anonimo </h4>
+                                    <div class="testimonio-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star fa-estr1"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonio-texto">"Confiamos en Grupo Sierra Verde para trasladar a nuestro personal por su puntualidad, seguridad y excelente servicio que hacen la diferencia en cada viaje."</p>
+                                <p class="testimonio-lugar">Cajamarca</p>
+                                <p class="testimonio-fecha">Mayo 2026</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/index.html" class="logo-footer"><img style="width: 120px; height: 60px; justify-self: center;" src="/assets/images/SV-Logo-Blanco.png" alt=""></a>
+                <p>Somos una empresa de transporte comprometida con brindar un servicio seguro, puntual y de calidad, conectando personas y comunidades con responsabilidad, profesionalismo y un firme compromiso con el desarrollo de la región Cajamarca.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Acceso Rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="/pages/servicios.html">Servicios</a></li>
+                    <li><a href="/pages/politica.html">Política</a></li>
+                    <li><a href="/pages/contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                    <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul class="footer-links footer-contact-links">
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Jr.+Mara%C3%B1%C3%B3n+827+Cajamarca" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Jr. Marañón 827 - Cajamarca</a></li>
+                    <li><a href="mailto:g.sierraverde@gmail.com"><i class="fa-solid fa-envelope"></i> g.sierraverde@gmail.com</a></li>
+                    <li><a href="tel:+51944383514"><i class="fa-solid fa-mobile-screen-button"></i> +51 944 383 514</a></li>
+                    <li><a href="tel:+5176611170"><i class="fa-solid fa-phone"></i> (076) 611 170</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>Grupo Sierra Verde - Cajamarca, © 2026 - Todos los derechos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">|</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+
+        <script src="/js/script.js"></script>
+
+    </footer>
+
+
+
+
+    <script src="/js/slider.js"></script>
+    <script src="/js/slogan.js"></script>
+    <script src="/js/men-amburguesa.js"></script>
+
+
+</body>
+
+</html>

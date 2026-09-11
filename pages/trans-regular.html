@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/images/SV-Logo.png">
+    <title> Grupo Sierra Verde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style_general.css">
+    <link rel="stylesheet" href="/css/style_index1.css">
+    <link rel="stylesheet" href="/css/style_trans_reg.css">
+    <link rel="stylesheet" href="/css/style_nosotros.css">
+    <link rel="stylesheet" href="/css/style_serv_esp.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap">
+</head>
+
+<body>
+    <div class="progress-bar" id="progress"></div>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">
+                <span class="logo-icon"><img src="/assets/images/SV-Logo.png" alt=""></span>Grupo Sierra Verde
+            </a>
+            
+            <!-- MENU AMBURGUESA -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">INICIO</a></li>
+
+                <li class="dropdown">
+                    <a href="/pages/nosotros.html" class="dropbtn">
+                        NOSOTROS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/nosotros.html">Quienes Somos</a></li>
+                        <li><a href="/pages/valores.html">Valores</a></li>
+                        <li><a href="/pages/nosotros.html#testimonios">Testimonios</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/pages/trans-regular.html" class="dropbtn active1">
+                        SERVICIOS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/trans-regular.html" class="active1">Transporte Regular</a></li>
+                        <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                     </ul>
+                </li>
+
+                <li><a href="/pages/galeria.html">GALERÍA</a></li>
+                <li><a href="/pages/politica.html">POLÍTICA</a></li>
+                <li><a href="/pages/contactos.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://facebook.com/G.SierraVerde/" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/51944383514?text=Buenos días, tengo una consulta sobre..." target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-whatsapp"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/g.sierraverde?igsh=MTdrZHJpcGQyYzVoaA%3D%3D" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@gruposierraverde1" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-tiktok"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <!-- RUTAS SECTION -->
+        <section class="routes-section">
+            <div class="container">
+                <div class="routes-intro">
+                    <img src="/assets/images/rutas.png" alt="Rutas de transporte regular de Grupo Sierra Verde">
+                    <div class="routes-intro-content">
+                        <h2>Descubre nuestras rutas y llega a tu destino con la confianza de Grupo Sierra Verde.</h2>
+                        <p>Elige la ruta que más te convenga y revisa de forma rápida horarios, paraderos y tarifas para planificar tu viaje con total tranquilidad.</p>
+                    </div>
+                </div>
+
+                <div class="routes-layout">
+                    <!-- MENU SELECTOR -->
+                    <div class="routes-menu">
+                        <button class="route-btn active" data-route="ruta-tur-corp">
+                            <span class="route-number">Cajamarca ↔ Granja Porcón</span>
+                            <span class="route-name">Turismo y Corporativo</span>
+                        </button>
+                        <button class="route-btn" data-route="ruta-39">
+                            <span class="route-number">Cajamarca ↔ Porcón Alto</span>
+                            <span class="route-name">Ruta 39</span>
+                        </button>
+                        <button class="route-btn" data-route="ruta-p08">
+                            <span class="route-number">Porcón Bajo ↔ Hospital Regional de Cajamarca</span>
+                            <span class="route-name">Ruta P08</span>
+                        </button>
+                        <button class="route-btn" data-route="ruta-70">
+                            <span class="route-number">Cajamarca ↔ Llullapuquio</span>
+                            <span class="route-name">Ruta 70</span>
+                        </button>
+                        <button class="route-btn" data-route="ruta-80t">
+                            <span class="route-number">Cajamarca ↔ Tual</span>
+                            <span class="route-name">Ruta 80</span>
+                        </button>
+                        <button class="route-btn" data-route="ruta-80lr">
+                            <span class="route-number">Cajamarca ↔ La Ramada</span>
+                            <span class="route-name">Ruta 80</span>
+                        </button>
+                    </div>
+
+                    <!-- ROUTE DETAILS -->
+                    <div class="routes-details">
+                    <div class="route-detail active" id="ruta-tur-corp">
+                        <div class="detail-content">
+                            <div class="detail-info">
+                                <h3><i class="fas fa-bus"></i> Turismo y Corporativo</h3>
+                                <h4>Cajamarca ↔ Granja Porcón</h4>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-map-location-dot"></i> Paraderos:</h5>
+                                    <ul>
+                                        <p>Terminal Jr. Marañón 827</p>
+                                        <p>Granja Porcón</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-clock"></i> Horarios:</h5>
+                                    <ul>
+                                        <p><strong>Cajamarca - Granja Porcón:</strong> 5:00 a.m. - 8:30 a.m. - 1:30 p.m.</p>
+                                        <p><strong>Duración del viaje:</strong> 1h, 15min aprox.</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-circle-info"></i> Información:</h5>
+                                    <p><strong>Frecuencia:</strong> Servicio diario</p>
+                                    <p><strong>Costo del pasaje:</strong> S/ 10.00 por tramo (S/ 20.00 ida y vuelta)</p>
+                                </div>
+                            </div>
+                            <div class="detail-map">
+                                <iframe class="map-frame" title="Mapa de Granja Porcón" src="https://www.google.com/maps?q=Granja%20Porc%C3%B3n%20Cajamarca%20Peru&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-detail" id="ruta-39">
+                        <div class="detail-content">
+                            <div class="detail-info">
+                                <h3><i class="fas fa-bus"></i> Ruta 39</h3>
+                                <h4>Cajamarca ↔ Porcón Alto</h4>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-map-location-dot"></i> Paraderos:</h5>
+                                    <ul>
+                                        <p>Terminal Jr. Marañón 827</p>
+                                        <p>C. P. Porcón Alto</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-clock"></i> Horarios:</h5>
+                                    <ul>
+                                        <p><strong>Cajamarca - Porcón Alto:</strong> Salidas cada 10 min.</p>
+                                        <p><strong>Duración del viaje:</strong> 45min aprox.</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-circle-info"></i> Información:</h5>
+                                    <p><strong>Frecuencia:</strong> Servicio diario</p>
+                                    <p><strong>Costo del pasaje:</strong> S/ 4.00 por tramo (S/ 8.00 ida y vuelta)</p>
+                                </div>
+                            </div>
+                            <div class="detail-map">
+                                <iframe class="map-frame" title="Mapa de Porcón Alto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.464216707637!2d-78.59983251823853!3d-7.072052890877083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b25700098cee29%3A0xae4f5db86016a14c!2sPuesto%20Salud%20Porcon%20Alto!5e0!3m2!1ses!2spe!4v1784576226021!5m2!1ses!2spe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-detail" id="ruta-p08">
+                        <div class="detail-content">
+                            <div class="detail-info">
+                                <h3><i class="fas fa-bus"></i> Ruta P08</h3>
+                                <h4>Porcón Bajo ↔ Hospital Regional de Cajamarca</h4>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-map-location-dot"></i> Paraderos:</h5>
+                                    <ul>
+                                        <p>C. P. Porcon Bajo</p>
+                                        <p>Hospital Regional de Cajamarca</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-clock"></i> Horarios:</h5>
+                                    <ul>
+                                        <p><strong>Porcon Bajo - Hospital Reg. de Cajamarca:</strong> Salidas cada 15 min.</p>
+                                        <p><strong>Duración del viaje:</strong> 45min aprox.</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-circle-info"></i> Información:</h5>
+                                    <p><strong>Frecuencia:</strong> Servicio diario</p>
+                                    <p><strong>Costo del pasaje:</strong> S/ 3.00 por tramo (S/ 6.00 ida y vuelta)</p>
+                                </div>
+                            </div>
+                            <div class="detail-map">
+                                <iframe class="map-frame" title="Mapa del Hospital Regional de Cajamarca" src="https://www.google.com/maps?q=Hospital%20Regional%20de%20Cajamarca%20Peru&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-detail" id="ruta-70">
+                        <div class="detail-content">
+                            <div class="detail-info">
+                                <h3><i class="fas fa-bus"></i> Ruta 70</h3>
+                                <h4>Cajamarca ↔ Llullapuquio</h4>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-map-location-dot"></i> Paraderos:</h5>
+                                    <ul>
+                                        <p>Terminal Jr. Marañón 827</p>
+                                        <p>Llullapuquio</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-clock"></i> Horarios:</h5>
+                                    <ul>
+                                        <p><strong>Llullapuquio-Cajamarca:</strong> 6:00 a.m.</p>
+                                        <p><strong>Cajamarca - Llullapuquio:</strong> 4:00 p.m.</p>
+                                        <p><strong>Duración del viaje:</strong> 45min aprox.</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-circle-info"></i> Información:</h5>
+                                    <p><strong>Frecuencia:</strong> Servicio solo Lunes y Viernes</p>
+                                    <p><strong>Costo del pasaje:</strong> S/ 10.00 por tramo (S/ 20.00 ida y vuelta)</p>
+                                </div>
+                            </div>
+                            <div class="detail-map">
+                                <iframe class="map-frame" title="Mapa de Llullapuquio" src="https://www.google.com/maps?q=Llullapuquio%20Cajamarca%20Peru&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-detail" id="ruta-80t">
+                        <div class="detail-content">
+                            <div class="detail-info">
+                                <h3><i class="fas fa-bus"></i> Ruta 80</h3>
+                                <h4>Cajamarca ↔ Tual</h4>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-map-location-dot"></i> Paraderos:</h5>
+                                    <ul>
+                                        <p>Terminal Jr. Marañón 827</p>
+                                        <p>C. P. Tual</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-clock"></i> Horarios:</h5>
+                                    <ul>
+                                        <p><strong>Cajamarca - Tual:</strong> Salidas cada 1hr</p>
+                                        <p><strong>Duración del viaje:</strong> 1h aprox.</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-circle-info"></i> Información:</h5>
+                                    <p><strong>Frecuencia:</strong> Servicio diario</p>
+                                    <p><strong>Costo del pasaje:</strong> S/ 8.00 por tramo (S/ 16.00 ida y vuelta)</p>
+                                </div>
+                            </div>
+                            <div class="detail-map">
+                                <iframe class="map-frame" title="Mapa de Tual" src="https://www.google.com/maps?q=Tual%20Cajamarca%20Peru&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-detail" id="ruta-80lr">
+                        <div class="detail-content">
+                            <div class="detail-info">
+                                <h3><i class="fas fa-bus"></i> Ruta 80</h3>
+                                <h4>Cajamarca ↔ La Ramada</h4>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-map-location-dot"></i> Paraderos:</h5>
+                                    <ul>
+                                        <p>Terminal Jr. Marañón 827</p>
+                                        <p>C. P. La Ramada</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-clock"></i> Horarios:</h5>
+                                    <ul>
+                                        <p><strong>Cajamarca - La Ramada:</strong> Salidas cada 1hr</p>
+                                        <p><strong>Duración del viaje:</strong> 1hr aprox.</p>
+                                    </ul>
+                                </div>
+                                <div class="info-block">
+                                    <h5><i class="fas fa-circle-info"></i> Información:</h5>
+                                    <p><strong>Frecuencia:</strong> Servicio diario</p>
+                                    <p><strong>Costo del pasaje:</strong> S/ 8.00 por tramo (S/ 16.00 ida y vuelta)</p>
+                                </div>
+                            </div>
+                            <div class="detail-map">
+                                <iframe class="map-frame" title="Mapa de La Ramada" src="https://www.google.com/maps?q=La%20Ramada%20Cajamarca%20Peru&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/index.html" class="logo-footer"><img style="width: 120px; height: 60px; justify-self: center;" src="/assets/images/SV-Logo-Blanco.png" alt=""></a>
+                <p>Somos una empresa de transporte comprometida con brindar un servicio seguro, puntual y de calidad, conectando personas y comunidades con responsabilidad, profesionalismo y un firme compromiso con el desarrollo de la región Cajamarca.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Acceso Rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="/pages/servicios.html">Servicios</a></li>
+                    <li><a href="/pages/politica.html">Política</a></li>
+                    <li><a href="/pages/contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                    <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul class="footer-links footer-contact-links">
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Jr.+Mara%C3%B1%C3%B3n+827+Cajamarca" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Jr. Marañón 827 - Cajamarca</a></li>
+                    <li><a href="mailto:g.sierraverde@gmail.com"><i class="fa-solid fa-envelope"></i> g.sierraverde@gmail.com</a></li>
+                    <li><a href="tel:+51944383514"><i class="fa-solid fa-mobile-screen-button"></i> +51 944 383 514</a></li>
+                    <li><a href="tel:+5176611170"><i class="fa-solid fa-phone"></i> (076) 611 170</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>Grupo Sierra Verde - Cajamarca, © 2026 - Todos los derechos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">|</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+
+        <script src="/js/script.js"></script>
+
+    </footer>
+
+
+
+
+    <script src="/js/slider.js"></script>
+    <script src="/js/slogan.js"></script>
+    <script src="/js/men-amburguesa.js"></script>
+
+    <script>
+        const routesDetailsContainer = document.querySelector('.routes-details');
+        const routeButtons = document.querySelectorAll('.route-btn');
+
+        const isMobileView = () => window.matchMedia('(max-width: 768px)').matches;
+
+        const resetDesktopDetails = () => {
+            if (!routesDetailsContainer) return;
+            document.querySelectorAll('.route-detail').forEach(detail => {
+                if (!routesDetailsContainer.contains(detail)) {
+                    routesDetailsContainer.appendChild(detail);
+                }
+            });
+        };
+
+        const closeAllMobileDetails = () => {
+            routeButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.route-detail').forEach(detail => detail.classList.remove('active'));
+        };
+
+        const handleRouteClick = function() {
+            const routeId = this.getAttribute('data-route');
+            const detail = document.getElementById(routeId);
+            if (!detail) return;
+
+            const isAlreadyOpen = this.classList.contains('active');
+            const mobile = isMobileView();
+
+            if (mobile) {
+                closeAllMobileDetails();
+                if (!isAlreadyOpen) {
+                    this.classList.add('active');
+                    detail.classList.add('active');
+                    if (detail.parentNode !== this.parentNode) {
+                        this.parentNode.insertBefore(detail, this.nextSibling);
+                    }
+                }
+            } else {
+                resetDesktopDetails();
+                routeButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('.route-detail').forEach(item => item.classList.remove('active'));
+                detail.classList.add('active');
+            }
+        };
+
+        routeButtons.forEach(button => button.addEventListener('click', handleRouteClick));
+
+        // Force close details on load for mobile to avoid large empty space
+        if (isMobileView()) {
+            closeAllMobileDetails();
+            // ensure all details are in the details container (hidden)
+            resetDesktopDetails();
+        }
+
+        const handleResize = () => {
+            if (!isMobileView()) {
+                // move details back to the right column on desktop
+                resetDesktopDetails();
+            } else {
+                // when switching to mobile, ensure no detail stays open
+                closeAllMobileDetails();
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Redundant safety: also ensure details are closed if DOM loads after script
+            if (isMobileView()) {
+                closeAllMobileDetails();
+                resetDesktopDetails();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

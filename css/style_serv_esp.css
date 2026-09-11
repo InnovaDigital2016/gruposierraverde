@@ -1,0 +1,221 @@
+:root {
+    --serv-primary: #1a472a;
+    --serv-secondary: #2d7a4d;
+    --serv-accent: #f5c73b;
+    --serv-bg: #f7f9f6;
+    --serv-text: #4b5563;
+    --serv-border: #e5e7eb;
+}
+
+.serv-especial-section {
+    padding: 7rem 4rem 2rem 4rem;
+    background: linear-gradient(135deg, #f7f9f6 0%, #eef5ef 100%);
+}
+
+/* Hero: texto a la izquierda, imagen a la derecha */
+.serv-especial-hero{
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.serv-especial-hero-media img{
+    width: 320;
+    height: 180px;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.serv-especial-header {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 0 40px;
+    padding-top: 20px;
+    /* Centrar encabezado en desktop */
+    text-align: center;
+    margin: 0 auto;
+}
+
+.serv-especial-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(45, 122, 77, 0.1);
+    color: var(--serv-secondary);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+.serv-especial-header h2 {
+    font-size: 2.1rem;
+    color: var(--serv-primary);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.serv-especial-text {
+    font-size: 1rem;
+    color: var(--serv-text);
+    line-height: 1.7;
+    max-width: 720px;
+}
+
+.serv-especial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.serv-especial-card {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 16px;
+    align-items: start;
+    background: #ffffff;
+    border: 1px solid var(--serv-border);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.serv-especial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.serv-especial-icon {
+    width: 85px;
+    height: 85px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(45, 122, 77, 0.12);
+    color: var(--serv-secondary);
+    font-size: 3rem;
+}
+
+.serv-especial-content {
+    min-width: 0;
+}
+
+.serv-especial-card h3 {
+    font-size: 1.05rem;
+    color: var(--serv-primary);
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.serv-especial-card p {
+    color: var(--serv-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 0 10px;
+}
+
+.serv-especial-highlight {
+    font-weight: 700;
+    color: var(--serv-primary);
+}
+
+@media (max-width: 768px) {
+    .serv-especial-section {
+        padding: 0.1rem 1rem 1rem 1rem;
+    }
+
+    /* Centrar todo en móvil */
+    .serv-especial-hero{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .serv-especial-hero-media img{
+        max-width: 250px;
+        height: 180px;
+    }
+
+    .serv-especial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .serv-especial-card {
+        grid-template-columns: 1fr;
+    }
+
+    .serv-especial-icon {
+        margin-bottom: 6px;
+    }
+
+    .serv-especial-card {
+        text-align: center;
+        align-items: center;
+    }
+
+    .serv-especial-content {
+        display: block;
+    }
+}
+
+/* Más centrado específico móvil: iconos, textos e imágenes */
+@media (max-width: 768px) {
+    .serv-especial-header {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .serv-especial-eyebrow {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .serv-especial-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 520px;
+    }
+
+    .serv-especial-hero{
+        justify-items: center;
+        align-items: center;
+    }
+
+    .serv-especial-hero-media img{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+
+    .serv-especial-icon{
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .serv-especial-content p,
+    .serv-especial-card h3 {
+        text-align: center;
+    }
+}
+
+/* Mantener hero alineado verticalmente y centrar la columna de texto */
+.serv-especial-hero {
+  align-items: center;
+}
+
+/* Centrar la caja de texto dentro del grid (opcional) */
+.serv-especial-hero > .serv-especial-header {
+  justify-self: center;
+}

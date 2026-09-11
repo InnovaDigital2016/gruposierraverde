@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/images/SV-Logo.png">
+    <title> Grupo Sierra Verde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style_general.css">
+    <link rel="stylesheet" href="/css/style_index1.css">
+    <link rel="stylesheet" href="/css/menu_amb.css">
+    <link rel="stylesheet" href="/css/style_galeria.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap">
+</head>
+
+<body>
+    <div class="progress-bar" id="progress"></div>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">
+                <span class="logo-icon"><img src="/assets/images/SV-Logo.png" alt=""></span>Grupo Sierra Verde
+            </a>
+            
+            <!-- MENU AMBURGUESA -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">INICIO</a></li>
+
+                <li class="dropdown">
+                    <a href="/pages/nosotros.html" class="dropbtn">
+                        NOSOTROS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/nosotros.html">Quienes Somos</a></li>
+                        <li><a href="/pages/valores.html">Valores</a></li>
+                        <li><a href="/pages/nosotros.html#testimonios">Testimonios</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/pages/trans-regular.html" class="dropbtn">
+                        SERVICIOS <span class="arrow">&#11167;</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                        <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                     </ul>
+                </li>
+
+                <li><a href="/pages/galeria.html" class="active1">GALERÍA</a></li>
+                <li><a href="/pages/politica.html">POLÍTICA</a></li>
+                <li><a href="/pages/contactos.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://facebook.com/G.SierraVerde/" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/51944383514?text=Buenos días, tengo una consulta sobre..." target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-whatsapp"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/g.sierraverde?igsh=MTdrZHJpcGQyYzVoaA%3D%3D" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@gruposierraverde1" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="nav-icon">
+                        <i class="fa-brands fab fa-tiktok"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="gallery-page">
+            <div class="gallery-hero">
+                <p class="gallery-kicker">Nuestra comunidad en movimiento</p>
+                <h1>Galería destacada</h1>
+                <p class="gallery-intro">Momentos reales de nuestro servicio, rutas, trabajo en equipo y la confianza que construimos día a día en Cajamarca.</p>
+            </div>
+
+            <div class="gallery-toolbar" aria-label="Etiquetas de la galería">
+                <button class="tag" type="button" data-filter="all">Todo</button>
+                <button class="tag active" type="button" data-filter="fotos">Fotos</button>
+                <button class="tag" type="button" data-filter="videos">Videos</button>
+            </div>
+
+            <div class="gallery-grid" id="photoGalleryGrid">
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/flot-moderna.jpeg" aria-label="Ampliar imagen de flota moderna">
+                        <img src="/assets/images/flot-moderna.jpeg" alt="Flota moderna de Sierra Verde" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Transporte</span>
+                        <h3>Flota moderna</h3>
+                    </div>
+                </article>
+
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/interprovinciales.jpeg" aria-label="Ampliar imagen de servicio interprovincial">
+                        <img src="/assets/images/interprovinciales.jpeg" alt="Servicio interprovincial" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Rutas</span>
+                        <h3>Servicio interprovincial</h3>
+                    </div>
+                </article>
+
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/serv-especial.jpeg" aria-label="Ampliar imagen de servicio especial">
+                        <img src="/assets/images/serv-especial.jpeg" alt="Servicio especial" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Especial</span>
+                        <h3>Atención personalizada</h3>
+                    </div>
+                </article>
+
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/profesionalismo.jpeg" aria-label="Ampliar imagen de profesionalismo">
+                        <img src="/assets/images/profesionalismo.jpeg" alt="Profesionalismo de Sierra Verde" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Compromiso</span>
+                        <h3>Profesionalismo</h3>
+                    </div>
+                </article>
+
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/interprovinciales.jpeg" aria-label="Ampliar imagen de misión">
+                        <img src="/assets/images/interprovinciales.jpeg" alt="Misión de la empresa" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Comprometidos</span>
+                        <h3>Contigo siempre</h3>
+                    </div>
+                </article>
+
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/serv-especial.jpeg" aria-label="Ampliar imagen de valores">
+                        <img src="/assets/images/serv-especial.jpeg" alt="Valores de la empresa" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Seguridad</span>
+                        <h3>En ruta</h3>
+                    </div>
+                </article>
+
+                <article class="gallery-card photo-card" data-filter="fotos">
+                    <a href="#" class="photo-link" data-image="/assets/images/trans-relugar.png" aria-label="Ampliar imagen de transporte regular">
+                        <img src="/assets/images/trans-relugar.png" alt="Transporte regular" />
+                    </a>
+                    <div class="gallery-overlay">
+                        <span>Regular</span>
+                        <h3>Conectando Cajamarca</h3>
+                    </div>
+                </article>
+            </div>
+
+            <div class="gallery-grid" id="videoGalleryGrid" aria-live="polite"></div>
+
+            <div class="gallery-cta">
+                <p>Sigue nuestra historia en redes sociales</p>
+                <div class="social-row">
+                    <a href="https://facebook.com/G.SierraVerde/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/g.sierraverde" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@gruposierraverde1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-modal" id="imageModal" aria-hidden="true">
+            <div class="image-modal-box" role="dialog" aria-modal="true" aria-labelledby="imageModalTitle">
+                <div class="video-modal-header">
+                    <strong id="imageModalTitle">Vista ampliada</strong>
+                    <button type="button" class="image-modal-close video-modal-close" aria-label="Cerrar imagen">×</button>
+                </div>
+                <div class="image-modal-body">
+                    <img id="modalImage" src="" alt="Imagen ampliada" />
+                </div>
+            </div>
+        </div>
+
+        <div class="video-modal" id="videoModal" aria-hidden="true">
+            <div class="video-modal-box" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+                <div class="video-modal-header">
+                    <strong id="videoModalTitle">Reproduciendo contenido</strong>
+                    <button type="button" class="video-modal-close" aria-label="Cerrar video">×</button>
+                </div>
+                <iframe id="videoFrame" class="video-modal-frame" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>
+                <div class="video-modal-fallback" id="videoFallback">
+                    <p>La reproducción embebida depende del propio sitio de TikTok. Si no se carga, puedes abrir el video original directamente.</p>
+                    <a id="videoOpenLink" href="#" target="_blank" rel="noopener noreferrer">Abrir en TikTok</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/index.html" class="logo-footer"><img style="width: 120px; height: 60px; justify-self: center;" src="/assets/images/SV-Logo-Blanco.png" alt=""></a>
+                <p>Somos una empresa de transporte comprometida con brindar un servicio seguro, puntual y de calidad, conectando personas y comunidades con responsabilidad, profesionalismo y un firme compromiso con el desarrollo de la región Cajamarca.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Acceso Rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="/pages/servicios.html">Servicios</a></li>
+                    <li><a href="/pages/politica.html">Política</a></li>
+                    <li><a href="/pages/contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="/pages/trans-regular.html">Transporte Regular</a></li>
+                    <li><a href="/pages/serv-especial.html">Servicio Especial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul class="footer-links footer-contact-links">
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Jr.+Mara%C3%B1%C3%B3n+827+Cajamarca" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Jr. Marañón 827 - Cajamarca</a></li>
+                    <li><a href="mailto:g.sierraverde@gmail.com"><i class="fa-solid fa-envelope"></i> g.sierraverde@gmail.com</a></li>
+                    <li><a href="tel:+51944383514"><i class="fa-solid fa-mobile-screen-button"></i> +51 944 383 514</a></li>
+                    <li><a href="tel:+5176611170"><i class="fa-solid fa-phone"></i> (076) 611 170</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>Grupo Sierra Verde - Cajamarca, © 2026 - Todos los derechos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">|</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+
+        <script src="/js/script.js"></script>
+
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.tag');
+        const photoGalleryGrid = document.getElementById('photoGalleryGrid');
+        const videoGalleryGrid = document.getElementById('videoGalleryGrid');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const videoModal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        const videoFallback = document.getElementById('videoFallback');
+        const imageCloseButton = document.querySelector('#imageModal .image-modal-close');
+        const videoCloseButton = document.querySelector('#videoModal .video-modal-close');
+
+        // Edita esta lista para agregar o cambiar los videos de la galería.
+        // Cada elemento debe tener: title, url, source.
+        const videosData = [
+            { title: 'Nuestros Turistas', url: 'https://www.tiktok.com/@gruposierraverde1/video/7669858731433184520', source: 'TikTok' },
+            { title: 'Nuestra Rutas', url: 'https://www.tiktok.com/@gruposierraverde1/video/7555214100104563976', source: 'TikTok' },
+            { title: 'Nuestras Salidas', url: 'https://www.tiktok.com/@gruposierraverde1/video/7667284068785999111', source: 'TikTok' },
+            { title: 'Nuestra Seguridad', url: 'https://www.tiktok.com/@gruposierraverde1/video/7653315695396146450', source: 'TikTok' },
+
+        ];
+
+        function getVideoMeta(url) {
+            const normalizedUrl = (url || '').trim();
+            const youtubeMatch = normalizedUrl.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/i);
+            if (youtubeMatch) {
+                return {
+                    type: 'youtube',
+                    id: youtubeMatch[1],
+                    thumb: `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`,
+                    label: 'YouTube'
+                };
+            }
+
+            const tiktokMatch = normalizedUrl.match(/tiktok\.com\/(?:.*\/)?video\/(\d+)/i);
+            if (tiktokMatch) {
+                return {
+                    type: 'tiktok',
+                    id: tiktokMatch[1],
+                    thumb: '',
+                    label: 'TikTok'
+                };
+            }
+
+            if (normalizedUrl.includes('facebook.com')) {
+                return {
+                    type: 'facebook',
+                    id: '',
+                    thumb: '',
+                    label: 'Facebook'
+                };
+            }
+
+            return {
+                type: 'general',
+                id: '',
+                thumb: '',
+                label: 'Video'
+            };
+        }
+
+        function renderVideoGallery() {
+            const container = document.getElementById('videoGalleryGrid');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            videosData.forEach((video) => {
+                const videoMeta = getVideoMeta(video.url);
+                const card = document.createElement('article');
+                card.className = 'gallery-card video-card';
+                card.dataset.filter = 'videos';
+
+                const link = document.createElement('a');
+                link.href = video.url;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.className = 'video-link';
+                link.dataset.videoUrl = video.url;
+                link.dataset.videoType = videoMeta.type;
+                link.dataset.videoId = videoMeta.id;
+                link.setAttribute('aria-label', `Ver video: ${video.title}`);
+
+                if (videoMeta.type === 'youtube' && videoMeta.thumb) {
+                    const img = document.createElement('img');
+                    img.className = 'video-thumb';
+                    img.src = videoMeta.thumb;
+                    img.alt = `Preview del video ${video.title}`;
+                    link.appendChild(img);
+                } else {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'video-placeholder';
+                    placeholder.setAttribute('aria-hidden', 'true');
+                    link.appendChild(placeholder);
+
+                    if (videoMeta.type === 'tiktok') {
+                        loadTikTokThumbnail(video.url, link, video.title);
+                    }
+                }
+
+                const playBadge = document.createElement('span');
+                playBadge.className = 'play-badge';
+                playBadge.innerHTML = '<i class="fa-solid fa-play"></i>';
+                link.appendChild(playBadge);
+
+                const meta = document.createElement('div');
+                meta.className = 'gallery-meta';
+
+                const tag = document.createElement('span');
+                tag.className = 'meta-tag';
+                tag.textContent = video.source || videoMeta.label;
+
+                const title = document.createElement('h3');
+                title.textContent = video.title;
+
+                meta.appendChild(tag);
+                meta.appendChild(title);
+                card.appendChild(link);
+                card.appendChild(meta);
+                container.appendChild(card);
+            });
+        }
+
+        async function loadTikTokThumbnail(videoUrl, link, title) {
+            try {
+                const response = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(videoUrl)}`);
+                if (!response.ok) return;
+
+                const videoData = await response.json();
+                if (!videoData.thumbnail_url || !link.isConnected) return;
+
+                const img = document.createElement('img');
+                img.className = 'video-thumb';
+                img.src = videoData.thumbnail_url;
+                img.alt = `Vista previa del video ${title}`;
+                img.addEventListener('load', () => link.classList.add('is-loaded'), { once: true });
+                img.addEventListener('error', () => img.remove(), { once: true });
+                link.insertBefore(img, link.querySelector('.play-badge'));
+            } catch (error) {
+                // Conserva el fondo de respaldo si TikTok no permite consultar la miniatura.
+            }
+        }
+
+        function applyGalleryFilter(filter) {
+            filterButtons.forEach(button => {
+                const isActive = button.dataset.filter === filter;
+                button.classList.toggle('active', isActive);
+            });
+
+            const showPhotos = filter === 'all' || filter === 'fotos';
+            const showVideos = filter === 'all' || filter === 'videos';
+
+            if (photoGalleryGrid) {
+                photoGalleryGrid.hidden = !showPhotos;
+                photoGalleryGrid.querySelectorAll('.gallery-card').forEach(card => {
+                    card.hidden = !showPhotos;
+                });
+            }
+
+            if (videoGalleryGrid) {
+                videoGalleryGrid.hidden = !showVideos;
+                videoGalleryGrid.querySelectorAll('.gallery-card').forEach(card => {
+                    card.hidden = !showVideos;
+                });
+            }
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                applyGalleryFilter(button.dataset.filter);
+            });
+        });
+
+        document.querySelectorAll('.photo-link').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const imageSrc = link.dataset.image || '';
+                modalImage.src = imageSrc;
+                modalImage.alt = link.getAttribute('aria-label') || 'Imagen ampliada';
+                imageModal.classList.add('is-open');
+                imageModal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        if (videoGalleryGrid) {
+            videoGalleryGrid.addEventListener('click', (event) => {
+                const link = event.target.closest('.video-link');
+                if (!link) return;
+
+                event.preventDefault();
+                const sourceUrl = link.dataset.videoUrl || '';
+                if (sourceUrl) window.open(sourceUrl, '_blank', 'noopener,noreferrer');
+            });
+        }
+
+        function closeImageModal() {
+            imageModal.classList.remove('is-open');
+            imageModal.setAttribute('aria-hidden', 'true');
+            modalImage.src = '';
+        }
+
+        function closeVideoModal() {
+            videoModal.classList.remove('is-open');
+            videoModal.setAttribute('aria-hidden', 'true');
+            videoFrame.src = '';
+            videoFallback.classList.remove('is-visible');
+        }
+
+        imageCloseButton.addEventListener('click', closeImageModal);
+        videoCloseButton.addEventListener('click', closeVideoModal);
+
+        imageModal.addEventListener('click', (event) => {
+            if (event.target === imageModal) {
+                closeImageModal();
+            }
+        });
+
+        videoModal.addEventListener('click', (event) => {
+            if (event.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                if (imageModal.classList.contains('is-open')) closeImageModal();
+                if (videoModal.classList.contains('is-open')) closeVideoModal();
+            }
+        });
+
+        videoFrame.addEventListener('load', () => {
+            const iframeSrc = videoFrame.src;
+            if (!iframeSrc || iframeSrc.includes('about:blank')) {
+                videoFallback.classList.add('is-visible');
+            }
+        });
+
+        renderVideoGallery();
+        applyGalleryFilter('fotos');
+    </script>
+
+<script src="/js/slider.js"></script>
+    <script src="/js/slogan.js"></script>
+    <script src="/js/men-amburguesa.js"></script>
+
+
+</body>
+
+</html>

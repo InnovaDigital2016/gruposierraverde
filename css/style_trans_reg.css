@@ -1,0 +1,779 @@
+/* ========================================
+   TRANSPORTE REGULAR - ESTILOS RESPONSIVOS
+   ======================================== */
+
+/* Variables de Color */
+:root {
+    --primary-color: #1a472a;
+    --secondary-color: #2d7a4d;
+    --accent-color: #f5c73b;
+    --light-bg: #f5f5f5;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-color: #e0e0e0;
+    --success-color: #27ae60;
+    --info-color: #3498db;
+}
+
+/* ========================================
+   LANDING ROUTES SECTION
+   ======================================== */
+.landing-routes {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-routes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(245, 199, 59, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.landing-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.landing-routes h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    animation: slideDown 0.8s ease;
+}
+
+.landing-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeIn 0.8s ease 0.2s forwards;
+    margin: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   COVERAGE SECTION
+   ======================================== */
+.coverage-section {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coverage-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.coverage-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.coverage-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.coverage-item {
+    background: var(--light-bg);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.coverage-item:hover {
+    background: white;
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.coverage-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.coverage-item h3 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ========================================
+   ROUTES SECTION
+   ======================================== */
+.routes-section {
+    padding: 7rem 2rem 2rem 2rem;
+}
+
+.routes-intro {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 35px;
+    padding: 24px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.routes-intro img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.routes-intro-content {
+    flex: 1;
+}
+
+
+.routes-intro-content p {
+    margin: 12px 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.routes-section h2 {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0;
+    padding-top: 0;
+}
+
+/* Routes Layout */
+.routes-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 290px) 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+/* Routes Menu */
+.routes-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+}
+
+.route-btn {
+    background: white;
+    border: 2px solid var(--border-color);
+    padding: 12px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    min-width: unset;
+    align-items: center;
+}
+
+.route-btn:hover {
+    border-color: var(--secondary-color);
+    background: var(--light-bg);
+    transform: translateY(-3px);
+}
+
+.route-btn.active {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+    box-shadow: 0 5px 20px rgba(45, 122, 77, 0.3);
+}
+
+.route-number {
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.5px;
+}
+
+.route-name {
+    font-size: 0.78rem;
+    opacity: 0.8;
+}
+
+/* Route Details */
+.routes-details {
+    position: relative;
+}
+
+.route-detail {
+    display: none;
+    animation: fadeInUp 0.5s ease;
+}
+
+.route-detail.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+    gap: 24px;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-info h3 {
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-info h4 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.info-block {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-block h5 {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-block h5 i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.info-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-block ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    color: var(--text-light);
+    position: relative;
+}
+
+.info-block ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.info-block p {
+    color: var(--text-light);
+    margin: 6px 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Detail Map */
+.detail-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    width: 100%;
+}
+
+.map-container,
+.map-frame {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.map-frame {
+    border: 0;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #f0f0f0 100%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 2px dashed var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.map-placeholder:hover {
+    border-color: var(--secondary-color);
+    background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+}
+
+.map-placeholder i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    opacity: 0.6;
+}
+
+.map-placeholder p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLETS (768px)
+   ======================================== */
+@media (max-width: 768px) {
+    .landing-routes h1 {
+        font-size: 2.5rem;
+        padding: 0 20px;
+    }
+
+    .landing-routes {
+        padding: 60px 20px;
+    }
+
+    .landing-subtitle {
+        font-size: 1rem;
+    }
+
+    .coverage-header h2,
+    .special-services-section h2 {
+        font-size: 2rem;
+    }
+
+    .routes-intro {
+        flex-direction: column;
+        align-items: flex-start;        
+    }
+
+    .routes-intro img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .coverage-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .coverage-item {
+        padding: 20px 15px;
+    }
+
+    .coverage-item i {
+        font-size: 2rem;
+    }
+
+    .detail-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 25px;
+    }
+
+    .detail-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .routes-layout {
+        display: block;
+    }
+
+    .routes-menu {
+        width: 100%;
+    }
+
+    .routes-details {
+        width: 100%;
+    }
+
+    /* Details hidden by default on mobile; only add spacing when active */
+    .route-detail {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.35s ease, opacity 0.35s ease;
+        margin: 0;
+        padding: 0;
+    }
+
+    .route-detail.active {
+        display: block;
+        max-height: 2000px;
+        opacity: 1;
+        margin-bottom: 12px;
+    }
+
+    .route-detail .detail-content {
+        padding: 20px;
+    }
+
+    .detail-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .map-placeholder {
+        height: 250px;
+    }
+
+    .routes-menu {
+        gap: 10px;
+    }
+
+    .route-btn {
+        min-width: 150px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* no-op duplicate removed; handled above */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 25px 15px;
+    }
+
+    .service-card i {
+        font-size: 2rem;
+    }
+
+    .service-card h4 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVILES (480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .landing-routes {
+        padding: 50px 15px;
+    }
+
+    .landing-routes h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .landing-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .coverage-section,
+    .special-services-section {
+        padding: 40px 15px;
+    }
+
+    /* Reducir espacio inferior específico para la sección de rutas en móviles */
+    .routes-section {
+        padding: 30px 15px 10px;
+    }
+
+    .coverage-header h2,
+    .routes-section h2,
+    .special-services-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .coverage-header p {
+        font-size: 0.95rem;
+    }
+
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .coverage-item {
+        padding: 18px 12px;
+    }
+
+    .coverage-item h3 {
+        font-size: 0.95rem;
+    }
+
+    .coverage-item i {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .routes-menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .routes-layout {
+        margin-bottom: 0;
+    }
+
+    .routes-menu {
+        margin-bottom: 0;
+    }
+
+    .routes-details {
+        margin-bottom: 0;
+    }
+
+    .route-btn {
+        width: 100%;
+        min-width: auto;
+        padding: 12px 20px;
+    }
+
+    .detail-content {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .detail-info h3 {
+        font-size: 1.3rem;
+        gap: 8px;
+    }
+
+    .detail-info h3 i {
+        font-size: 1.3rem;
+    }
+
+    .detail-info h4 {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .info-block {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .info-block h5 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .info-block h5 i {
+        font-size: 1rem;
+    }
+
+    .info-block ul li {
+        padding: 6px 0;
+        padding-left: 22px;
+        font-size: 0.9rem;
+    }
+
+    .info-block p {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+
+    .map-placeholder {
+        height: 200px;
+    }
+
+    .map-placeholder i {
+        font-size: 2.5rem;
+    }
+
+    .map-placeholder p {
+        font-size: 0.9rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 20px 12px;
+        border-left-width: 4px;
+    }
+
+    .service-card i {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card h4 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+        margin: 5px 0;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVILES PEQUEÑOS (320px)
+   ======================================== */
+@media (max-width: 320px) {
+    .landing-routes h1 {
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+    }
+
+    .landing-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .coverage-header h2,
+    .routes-section h2,
+    .special-services-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .detail-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .detail-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .info-block h5 {
+        font-size: 0.9rem;
+    }
+
+    .info-block ul li {
+        font-size: 0.85rem;
+    }
+
+    .route-btn {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+
+    .route-number {
+        font-size: 1.1rem;
+    }
+
+    .service-card {
+        padding: 18px 10px;
+    }
+
+    .service-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+}

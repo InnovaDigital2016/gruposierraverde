@@ -1,0 +1,114 @@
+/*==========================
+VIDEO HERO
+==========================*/
+
+.hero-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+/*==========================
+SLIDER
+==========================*/
+
+.slider{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.slides{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity .8s ease;
+}
+
+.slide.active{
+    opacity:1;
+    z-index:2;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    /*border-radius:20px;*/
+}
+
+/*==========================
+BOTONES
+==========================*/
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    cursor:pointer;
+    z-index:20;
+    transition:.3s;
+}
+
+.slider-btn:hover{
+    background:var(--color-principal);
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+
+/*==========================
+PUNTOS
+==========================*/
+
+.slider-dots{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:10px;
+    z-index:20;
+}
+
+.dot{
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:#ffffff;
+    cursor:pointer;
+    transition:.3s;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.dot:hover{
+    background: var(--color-complementario);
+    border: 1px solid var(--color-apoyo);
+    transform:scale(1.3);
+}
+
+.dot.active{
+    background:var(--color-principal);
+    transform:scale(1.25);
+}
