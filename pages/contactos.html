@@ -21,7 +21,7 @@
     <div class="progress-bar" id="progress"></div>
     <header>
         <nav>
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <span class="logo-icon"><img src="../assets/images/SV-Logo.png" alt=""></span>Grupo Sierra Verde
             </a>
             
@@ -31,7 +31,7 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html">INICIO</a></li>
+                <li><a href="../index.html">INICIO</a></li>
 
                 <li class="dropdown">
                     <a href="../pages/nosotros.html" class="dropbtn">
@@ -156,13 +156,13 @@
                 <div class="contact-content">
                     <p class="section-label" style="text-align: left;">Escríbenos</p>
                     <h2>¿Tienes alguna pregunta?</h2>
-                    <p>Envíanos tu correo y un mensaje breve para recibir información sobre rutas, horarios, tarifas o servicios especiales.</p>
-                    <form class="contact-form" action="mailto:g.sierraverde@gmail.com" method="post" enctype="text/plain">
-                        <label class="sr-only" for="email">Correo electrónico</label>
-                        <input id="email" type="email" class="contact-input" name="email" placeholder="Ingresa tu correo electrónico" required>
-                        <label class="sr-only" for="message">Mensaje</label>
+                    <p>Déjanos tu número y cuéntanos en qué podemos ayudarte.</p>
+                    <form class="contact-form" id="whatsapp-contact-form">
+                        <label for="phone" style="color: var(--color-principal); font-weight: bold;">Número de WhatsApp</label>
+                        <input id="phone" type="tel" class="contact-input" name="phone" placeholder="Ingresa tu número" required>
+                        <label for="message" style="color: var(--color-principal); font-weight: bold;">Mensaje</label>
                         <textarea id="message" class="contact-textarea" name="message" placeholder="Escribe tu mensaje..." required></textarea>
-                        <button class="contact-btn" type="submit">Enviar mensaje</button>
+                        <button class="contact-btn" type="submit">Contactar por WhatsApp</button>
                     </form>
                 </div>
             </div>

@@ -64,3 +64,18 @@ window.addEventListener("load", ()=>{
     setInterval(rotate, 4000);
 });
 
+const whatsappContactForm = document.getElementById("whatsapp-contact-form");
+
+if (whatsappContactForm) {
+    whatsappContactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(whatsappContactForm);
+        const phone = formData.get("phone");
+        const message = formData.get("message");
+        const whatsappText = `Número de WhatsApp: ${phone}\nMensaje: ${message}`;
+
+        window.open(`https://wa.me/51944383514?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer");
+    });
+}
+
