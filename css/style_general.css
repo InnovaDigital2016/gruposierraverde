@@ -286,12 +286,12 @@ nav{
   background-color: var(--color-principal);
   color: var(--color-apoyo);
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   transition: background 0.3s, transform 0.2s;
 }
 
@@ -305,12 +305,12 @@ nav{
   background: transparent;
   color: var(--color-principal);
   border: 2px solid var(--color-principal);
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   transition: border-color 0.3s, transform 0.2s;
 }
 
@@ -679,7 +679,7 @@ section{
 
 .prog-1{
   background: linear-gradient(135deg, rgba(242, 242, 242, 0.168),
-            rgba(82, 164, 111, 0.55)), url("../assets/images/trans-relugar.png") center/cover no-repeat;
+            rgba(82, 164, 111, 0.55)), url("../assets/images/trans-relugar1.png") center/cover no-repeat;
 }
 .prog-2{
   background: linear-gradient(135deg, rgba(242, 242, 242, 0.168),

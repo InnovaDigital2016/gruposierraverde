@@ -14,6 +14,20 @@
     <link rel="stylesheet" href="css/menu_amb.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap">
+    <style>
+        .quote-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.5);align-items:center;justify-content:center;padding:20px}
+        .quote-modal.open{display:flex}
+        .quote-modal-content{background:#fff;border-radius:8px;max-width:640px;width:100%;padding:20px;position:relative;box-shadow:0 6px 30px rgba(0,0,0,.2)}
+        .quote-modal-close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:28px;cursor:pointer}
+        .quote-modal-content h3{margin-top:0;color:var(--color-principal)}
+        .quote-modal-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        .quote-modal-row .full{grid-column:1/-1}
+        .quote-modal-content input,.quote-modal-content textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;background:#fff;color:#222}
+        .quote-modal-content label{font-size:14px;display:block;margin-bottom:6px;color:#222;font-weight:600}
+        .quote-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+        .quote-btn-ghost{background:transparent;border:1px solid #ccc;padding:8px 12px;border-radius:6px;cursor:pointer}
+        @media(max-width:600px){.quote-modal-row{grid-template-columns:1fr}}
+    </style>
 </head>
 
 <body>
@@ -100,8 +114,9 @@
                 <p class="hero-sub">Con <strong>Grupo Sierra Verde</strong> viajas con seguridad, comodidad y
                     puntualidad. ¿Listo para tu próximo destino? ¡Reserva tu viaje con nosotros!</p>
                 <div class="btn-group">
-                    <a href="#" class="btn-primary">Reservar Pasaje</a>
-                    <a href="pages/trans-regular.html" class="btn-secondary">Ver Rutas y Horarios</a>
+                    <button type="button" id="open-quote-btn" class="btn-primary">Cotizar Servicio</button>
+                    <a href="#" class="btn-secondary">Reservar Pasaje</a>
+                    <a href="../pages/trans-regular.html" class="btn-primary">Rutas y Horarios</a>
                 </div>
                 <div div class="hero-stats">
                     <div>
@@ -234,6 +249,7 @@
                         <img src="./assets/images/preg-frec-3.png" alt="Image 3" class="about-img">
                     </div>
                 </div>
+                
                 <div class="about-content">
                     <p class="section-label" style="text-align: left;">Información Útil</p>
                     <h2 class="section-title" style="text-align: left;">Preguntas frecuentes</h2>
@@ -388,10 +404,30 @@
         </section>
 
   -->
-    
 
-
-  
+        <div id="quote-modal" class="quote-modal" aria-hidden="true">
+            <div class="quote-modal-content" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+                <button type="button" class="quote-modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+                <h3 id="quote-title">Cotizar Servicio</h3>
+                <form id="quote-form">
+                    <div class="quote-modal-row">
+                        <div><label>Nombre:<input type="text" name="nombre" required></label></div>
+                        <div><label>DNI:<input type="text" name="dni" required></label></div>
+                        <div><label>Destino:<input type="text" name="destino" required></label></div>
+                        <div><label>Celular:<input type="tel" name="celular" required></label></div>
+                        <div><label>Fecha:<input type="date" name="fecha" required></label></div>
+                        <div><label>Hora de Salida:<input type="time" name="hora_salida" required></label></div>
+                        <div><label>Hora de Llegada:<input type="time" name="hora_llegada"></label></div>
+                        <div><label>Nro de personas:<input type="number" name="nro_personas" min="1"></label></div>
+                        <div class="full"><label>Descripción:<textarea name="descripcion" rows="3"></textarea></label></div>
+                    </div>
+                    <div class="quote-modal-actions">
+                        <button type="button" class="quote-btn-ghost" id="modal-cancel">Cancelar</button>
+                        <button type="submit" class="btn-primary">Enviar por WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     </main>
 
@@ -452,6 +488,41 @@
 <script src="js/slider.js"></script>
 <script src="js/slogan.js"></script>
 <script src="js/men-amburguesa.js"></script>
+
+<script>
+    (function () {
+        const openButton = document.getElementById('open-quote-btn');
+        const modal = document.getElementById('quote-modal');
+        const closeButton = document.getElementById('modal-close');
+        const cancelButton = document.getElementById('modal-cancel');
+        const form = document.getElementById('quote-form');
+        const whatsappNumber = '51927894446';
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        openButton.addEventListener('click', function () {
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            modal.querySelector('input[name="nombre"]').focus();
+        });
+        closeButton.addEventListener('click', closeModal);
+        cancelButton.addEventListener('click', closeModal);
+        modal.addEventListener('click', function (event) {
+            if (event.target === modal) closeModal();
+        });
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const data = new FormData(form);
+            const message = `Hola Sierra Verde, quisiera cotizar un servicio de transporte.\n\n* Nombre: ${data.get('nombre')}\n* DNI: ${data.get('dni')}\n* Destino: ${data.get('destino')}\n* Celular: ${data.get('celular')}\n* Fecha: ${data.get('fecha')}\n* Hora de Salida: ${data.get('hora_salida')}\n* Hora de Llegada: ${data.get('hora_llegada') || ''}\n* Nro de personas: ${data.get('nro_personas') || ''}\n* Descripción: ${data.get('descripcion') || ''}\n\n¿Podrían brindarme información sobre disponibilidad y tarifas?`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+            closeModal();
+            form.reset();
+        });
+    })();
+</script>
 
 
 </body>
